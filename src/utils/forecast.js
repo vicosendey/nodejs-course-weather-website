@@ -8,7 +8,7 @@ const forecast = ((latitude, longitude, callback) => {
         } else if(body.error){
             callback('Unable to find location in darksky', undefined);
         } else{
-            callback(undefined,`Love you my pitiquirica!         But, talking about forecast...It is currently ${body.currently.temperature} degrees out. There is ${body.currently.precipProbability} chance of rain. Max: ${body.daily.data[0].temperatureHigh} and Min: ${body.daily.data[1].temperatureLow}`);
+            callback(undefined,`Love you my pitiquirica!         But, talking about forecast...It is currently ${body.currently.temperature} degrees out. There is ${body.currently.precipProbability*100} chance of rain. Max: ${body.daily.data[0].temperatureHigh} and Min: ${body.daily.data[1].temperatureLow}`);
         }
     });
 });
